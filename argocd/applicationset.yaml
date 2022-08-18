@@ -8,18 +8,18 @@ spec:
     - matrix:
         generators:
           - list:
-            elements:
-             - namespace: dev
-               path: envs/dev
-               cluster: https://kubernetes.default.svc
-               argoproject: default
-             - namespace: prod
-               path: envs/prod
-               cluster: https://kubernetes.default.svc
-               argoproject: default 
+              elements:
+               - namespace: dev
+                 path: envs/dev
+                 cluster: https://kubernetes.default.svc
+                 argoproject: default
+               - namespace: prod
+                 path: envs/prod
+                 cluster: https://kubernetes.default.svc
+                 argoproject: default 
           - list:
-             elements:
-             - name: mq
+              elements:
+                - name: mq
   template:
     metadata:
       name: '{{name}}-{{namespace}}'
