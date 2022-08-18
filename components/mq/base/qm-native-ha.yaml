@@ -1,0 +1,45 @@
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  name: queue-manager-ha
+spec:
+  license:
+    accept: true
+    license: L-RJON-C7QG3S
+    metric: VirtualProcessorCore
+    use: NonProduction
+  securityContext:
+    supplementalGroups: [99]
+  queueManager:
+    route:
+      enabled: true
+    name: QMHA
+    availability:
+      type: NativeHA
+      tls:
+        secretName: queue-manager-ha-secret-internal
+    storage:
+      queueManager:
+        class: ibmc-block-gold
+        deleteClaim: true
+      persistedData:
+        enabled: false
+        class: ibmc-block-gold
+        deleteClaim: true
+      recoveryLogs:
+        enabled: false
+        class: ibmc-block-gold
+        deleteClaim: true
+    resources:
+      limits:
+        memory: 2Gi
+      requests:
+        memory: 2Gi
+    mqsc:
+    - configMap:
+        name: queue-manager-ha-mi-configmap
+        items:
+        - tls.mqsc
+  version: 9.2.5.0-r3
+  web:
+    enabled: true
