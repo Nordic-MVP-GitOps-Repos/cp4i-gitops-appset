@@ -10,5 +10,5 @@ resources:
 
 patchesStrategicMerge:
 
-- version.yml
-- settings.yml
+- version.yaml
+- license.yaml
