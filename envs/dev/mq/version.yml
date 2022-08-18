@@ -1,0 +1,4 @@
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+spec:
+  version: 9.2.5.0-r3
