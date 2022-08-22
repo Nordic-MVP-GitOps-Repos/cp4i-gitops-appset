@@ -1,5 +1,7 @@
 apiVersion: mq.ibm.com/v1beta1
 kind: QueueManager
+metadata:
+  name: queue-manager-ha
 spec:
   license:
     license: L-RJON-C7QG3S
