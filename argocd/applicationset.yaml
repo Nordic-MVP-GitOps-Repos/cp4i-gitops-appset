@@ -31,4 +31,4 @@ spec:
         path: '{{path}}/{{name}}'
       destination:
         server: '{{cluster}}'
-        namespace: cp4i-'{{namespace}}'
+        namespace: 'cp4i-{{namespace}}'
