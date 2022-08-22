@@ -6,9 +6,7 @@ resources:
 
 #components:
 #  - ../../variants/prod
-#  - ../../variants/asia
 
 patchesStrategicMerge:
-
 - version.yaml
 - license.yaml
