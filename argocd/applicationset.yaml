@@ -32,3 +32,6 @@ spec:
       destination:
         server: '{{cluster}}'
         namespace: 'cp4i-{{namespace}}'
+      syncPolicy:
+        automated:
+          selfHeal: true
