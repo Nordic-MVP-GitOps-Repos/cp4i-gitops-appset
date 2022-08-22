@@ -4,6 +4,9 @@ kind: Kustomization
 bases:
 - ../../../components/mq/base
 
+resources:
+- namespace.yaml
+
 patchesStrategicMerge:
 - version.yaml
 - license.yaml
