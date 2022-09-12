@@ -3,6 +3,7 @@ kind: Kustomization
 
 bases:
 - ../../../components/mq/base
+- ../../../components/mq/operator/base
 
 resources:
 - namespace.yaml
