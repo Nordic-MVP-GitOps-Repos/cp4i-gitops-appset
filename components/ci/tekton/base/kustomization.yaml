@@ -3,4 +3,4 @@ kind: Kustomization
 
 resources:
 - tekton-workspace-pvc.yaml
-- https://raw.githubusercontent.com/thomas-mattsson/s2i-ace/7dcca2c429dd9ace5c4f1cd5a86fd783ef851708/tekton/tasks/s2i-ace-task.yaml
+- https://raw.githubusercontent.com/thomas-mattsson/s2i-ace/d5f8bc7976fe2dba49ffa0ff36d94022a564e4db/tekton/tasks/s2i-ace-task.yaml
