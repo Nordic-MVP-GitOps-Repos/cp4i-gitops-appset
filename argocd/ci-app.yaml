@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ci
+  annotations:
+    argocd.argoproj.io/sync-wave: "200"
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Nordic-MVP-GitOps-Repos/cp4i-gitops-appset.git
+    targetRevision: HEAD
+    path: 'envs/dev/ci'
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: cp4i-ci
+  syncPolicy:
+    automated:
+      selfHeal: true
+  ignoreDifferences:
+    - kind: ServiceAccount
+      jsonPointers:
+        - /secrets
+        - /imagePullSecrets
+    - group: triggers.tekton.dev
+      kind: EventListener
+      jsonPointers:
+        - /spec/triggers
