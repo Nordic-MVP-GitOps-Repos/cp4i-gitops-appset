@@ -13,10 +13,12 @@ spec:
                  path: envs/dev
                  cluster: https://kubernetes.default.svc
                  argoproject: default
+                 revision: HEAD
                - namespace: prod
                  path: envs/prod
                  cluster: https://kubernetes.default.svc
-                 argoproject: default 
+                 argoproject: default
+                 revision: HEAD
           - list:
               elements:
                 - name: mq
@@ -27,7 +29,7 @@ spec:
       project: '{{argoproject}}'
       source:
         repoURL: https://github.com/Nordic-MVP-GitOps-Repos/cp4i-gitops-appset.git
-        targetRevision: HEAD
+        targetRevision: '{{revision}}'
         path: '{{path}}/{{name}}'
       destination:
         server: '{{cluster}}'

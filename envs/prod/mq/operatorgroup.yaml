@@ -1,0 +1,8 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: cp4i-prod
+  namespace: cp4i-prod
+spec:
+  targetNamespaces:
+    - cp4i-prod

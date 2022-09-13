@@ -1,0 +1,8 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: cp4i-dev
+  namespace: cp4i-dev
+spec:
+  targetNamespaces:
+    - cp4i-dev
