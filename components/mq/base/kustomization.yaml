@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
 - qm-native-ha.yaml
+- queue-manager-ha-mi-configmap.yaml
