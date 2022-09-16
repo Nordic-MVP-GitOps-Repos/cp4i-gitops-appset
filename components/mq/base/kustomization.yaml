@@ -5,3 +5,4 @@ resources:
 - qm-native-ha.yaml
 - queue-manager-ha-mi-configmap.yaml
 - argocd-role.yaml
+- cert-manager-operand-request.yaml
