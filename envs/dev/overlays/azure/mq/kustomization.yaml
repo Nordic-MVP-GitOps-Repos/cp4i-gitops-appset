@@ -5,4 +5,4 @@ components:
   - ../../../../../components/mq/variants/azure
 
 resources:
-  - ../../../base
+  - ../../../base/mq
