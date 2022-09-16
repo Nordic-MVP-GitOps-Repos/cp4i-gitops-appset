@@ -1,0 +1,11 @@
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+spec:
+  queueManager:
+    storage:
+      queueManager:
+        class: ibmc-block-gold
+      persistedData:
+        class: ibmc-block-gold
+      recoveryLogs:
+        class: ibmc-block-gold
