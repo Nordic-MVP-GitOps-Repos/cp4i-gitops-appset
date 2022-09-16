@@ -4,6 +4,7 @@ kind: Kustomization
 bases:
 - ../../../components/mq/base
 - ../../../components/mq/operator/base
+- ../../../components/mq/certs/base
 
 resources:
 - namespace.yaml
@@ -12,3 +13,4 @@ resources:
 patchesStrategicMerge:
 - version.yaml
 - license.yaml
+- cert-dns-names.yaml
