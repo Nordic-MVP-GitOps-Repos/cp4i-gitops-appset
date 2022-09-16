@@ -8,6 +8,7 @@ rules:
     apiGroups:
       - cert-manager.io
       - mq.ibm.com
+      - operator.ibm.com
     resources:
       - '*'
 ---
