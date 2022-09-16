@@ -1,20 +1,19 @@
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: argocd-mq-role
+  name: argocd-operator-role
 rules:
   - verbs:
       - '*'
     apiGroups:
-      - cert-manager.io
-      - mq.ibm.com
+      - operator.ibm.com
     resources:
       - '*'
 ---
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: argocd-mq-rolebinding
+  name: argocd-operator-rolebinding
 subjects:
   - kind: ServiceAccount
     name: openshift-gitops-argocd-application-controller
@@ -22,4 +21,4 @@ subjects:
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: argocd-mq-role
+  name: argocd-operator-role
