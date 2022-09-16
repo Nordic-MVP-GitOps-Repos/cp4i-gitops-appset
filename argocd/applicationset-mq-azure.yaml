@@ -10,12 +10,12 @@ spec:
           - list:
               elements:
                - namespace: dev
-                 path: envs/dev
+                 path: envs/dev/overlays/azure
                  cluster: https://kubernetes.default.svc
                  argoproject: default
                  revision: HEAD
                - namespace: prod
-                 path: envs/prod
+                 path: envs/prod/overlays/azure
                  cluster: https://kubernetes.default.svc
                  argoproject: default
                  revision: HEAD
