@@ -1,0 +1,11 @@
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+spec:
+  queueManager:
+    storage:
+      queueManager:
+        class: managed-premium
+      persistedData:
+        class: managed-premium
+      recoveryLogs:
+        class: managed-premium
