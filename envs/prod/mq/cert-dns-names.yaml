@@ -1,0 +1,9 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: mq-nativeha-internal-tls
+spec:
+  dnsNames:
+    - '*.cp4i-prod.svc'
+    - '*.cp4i-prod.svc.local'
+    - '*.cp4i-prod.svc.local.cluster'
