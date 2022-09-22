@@ -1,0 +1,13 @@
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  name: queue-manager-ha
+spec:
+  queueManager:
+    storage:
+      queueManager:
+        class: gp2
+      persistedData:
+        class: gp2
+      recoveryLogs:
+        class: gp2
