@@ -10,3 +10,4 @@ spec:
   updateStrategy:
     registryPoll:
       interval: 45m
+
