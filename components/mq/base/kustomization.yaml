@@ -4,7 +4,9 @@ kind: Kustomization
 resources:
 - qm-one.yaml
 - qm-two.yaml
+- qm-three.yaml
 - queue-manager-ha-mi-configmap.yaml
 - queue-manager-two-ha-mi-configmap.yaml
+- queue-manager-three-ha-mi-configmap.yaml
 - argocd-role.yaml
 - cert-manager-operand-request.yaml
