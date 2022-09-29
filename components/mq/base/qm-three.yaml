@@ -16,8 +16,6 @@ spec:
     name: QMTHREE
     availability:
       type: SingleInstance
-      tls:
-        secretName: queue-manager-ha-secret-internal
     storage:
       queueManager:
         class: ibmc-block-gold
