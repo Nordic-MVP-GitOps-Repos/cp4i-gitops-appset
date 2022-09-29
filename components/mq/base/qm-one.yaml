@@ -13,7 +13,7 @@ spec:
   queueManager:
     route:
       enabled: true
-    name: QM-ONE
+    name: QMONE
     availability:
       type: NativeHA
       tls:
