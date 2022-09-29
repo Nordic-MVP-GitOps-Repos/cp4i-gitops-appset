@@ -8,31 +8,20 @@ spec:
     license: L-RJON-C7QG3S
     metric: VirtualProcessorCore
     use: NonProduction
-  securityContext:
-    supplementalGroups: [99]
   queueManager:
     route:
       enabled: true
-    name: QMTHREE
+    name: QM
     availability:
       type: SingleInstance
     storage:
       queueManager:
-        class: ibmc-block-gold
-        deleteClaim: true
-      persistedData:
-        enabled: false
-        class: ibmc-block-gold
-        deleteClaim: true
-      recoveryLogs:
-        enabled: false
-        class: ibmc-block-gold
-        deleteClaim: true
+        type: ibmc-block-gold
     resources:
       limits:
-        memory: 2Gi
+        memory: 1Gi
       requests:
-        memory: 2Gi
+        memory: 1Gi
     mqsc:
     - configMap:
         name: queue-manager-three-ha-mi-configmap
