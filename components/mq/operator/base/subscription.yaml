@@ -3,7 +3,7 @@ kind: Subscription
 metadata:
   name: ibm-mq
 spec:
-  channel: v1.8
+  channel: v2.0
   installPlanApproval: Automatic
   name: ibm-mq
   source: ibm-operator-catalog
