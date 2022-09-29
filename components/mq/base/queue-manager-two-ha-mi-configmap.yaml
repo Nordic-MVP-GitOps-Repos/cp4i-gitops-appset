@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: queue-manager--two-ha-mi-configmap
+  name: queue-manager-two-ha-mi-configmap
 data:
   tls.mqsc: |
     DEFINE QLOCAL('EXAMPLE.QUEUE') DEFPSIST(YES) REPLACE 
