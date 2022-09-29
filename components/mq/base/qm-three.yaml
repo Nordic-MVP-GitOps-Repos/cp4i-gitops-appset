@@ -11,7 +11,7 @@ spec:
   queueManager:
     route:
       enabled: true
-    name: QM
+    name: QMTHREE
     availability:
       type: SingleInstance
     storage:
