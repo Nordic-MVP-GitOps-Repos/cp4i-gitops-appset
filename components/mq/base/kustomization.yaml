@@ -2,7 +2,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- qm-native-ha.yaml
+- qm-one.yaml
+- qm-two.yaml
 - queue-manager-ha-mi-configmap.yaml
 - argocd-role.yaml
 - cert-manager-operand-request.yaml
