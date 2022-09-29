@@ -13,7 +13,7 @@ spec:
   queueManager:
     route:
       enabled: true
-    name: QM-TWO
+    name: QMTWO
     availability:
       type: NativeHA
       tls:
